@@ -28,12 +28,15 @@ const defaultTasks = [
 ]
 
 task("default", defaultTasks)
+task("build", ["compileJade", "compileStylus", "mvJs", "deps"])
 task("compileJade", compileJade)
 task("compileStylus", compileStylus)
 task("mvJs", mvJs)
 task("deps", deps)
 task("serve", serve)
 task("watchStuff", watchStuff)
+
+
 
 function compileJade () {
     const jadeConfig = {
