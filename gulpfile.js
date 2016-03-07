@@ -2,6 +2,7 @@ const path = require("path")
 
 const g = require("gulp")
 const gp = require("gulp-load-plugins")(g)
+const spawn = require("child_process").spawn
 
 const src = g.src.bind(g)
 const dest = g.dest.bind(g)
@@ -29,6 +30,7 @@ const defaultTasks = [
 
 task("default", defaultTasks)
 task("build", ["compileJade", "compileStylus", "mvJs", "deps"])
+task("ship", ["build"], shipIt)
 task("compileJade", compileJade)
 task("compileStylus", compileStylus)
 task("mvJs", mvJs)
@@ -36,7 +38,11 @@ task("deps", deps)
 task("serve", serve)
 task("watchStuff", watchStuff)
 
-
+function shipIt () {
+    const sync = spawn(path.join(__dirname, "sync.sh"))
+    sync.stdout.on("data", (data) => process.stdout.write(data))
+    sync.stderr.on("data", (data) => process.stderr.write(data))
+}
 
 function compileJade () {
     const jadeConfig = {
