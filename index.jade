@@ -207,15 +207,19 @@ html.no-js(lang="en-US")
 
           .six.columns
             h5 Hey, check out our Meetup group, too!
+
             a(href="http://www.meetup.com/code-for-nashville/", target="_blank")
-              img.u-img-responsive(src="/img/cfn-logo.png", alt="Code for Nashville Logo")
+              img.cfn-meetup-logo.u-img-responsive(src="/img/cfn-logo.png", alt="Code for Nashville Logo")
 
         //-img.logo.u-img-responsive(src="/img/logo.svg")
-        h1(style="margin: 0;") #[span(style="font-size: 1rem; letter-spacing: 1px;") THE] Nashville Day of Civic Hacking
+        .logo-group
+          p.the(style="font-size: 1rem; letter-spacing: 1px;") THE
+          h1.logo-standin  Nashville Day of Civic Hacking
 
-        h6.thanks Thank you! Let's make this awesome!
+        .u-text-center
+          h6.thanks Thank you! Let's make this awesome!
 
-        p.copyright.small(style="padding: 0;") &copy; 2016 Code for Nashville, Nashville Day of Civic Hacking
+          p.copyright.small(style="padding: 0;") &copy; 2016 Code for Nashville, Nashville Day of Civic Hacking
 
     script(src='//code.jquery.com/jquery-2.2.1.min.js')
     script window.jQuery || document.write('<script src="/vendor/jquery.min.js"><\/script>')

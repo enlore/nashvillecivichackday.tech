@@ -1,4 +1,6 @@
 $min400 = "(min-width: 400px)"
+$min560 = "(min-width: 560px)"
+$min700 = "(min-width: 700px)"
 
 body
     background-color lightgrey
@@ -108,8 +110,27 @@ footer
 footer .logo
     margin-top 2rem
 
+footer .logo-group
+    text-align center
+
+footer .the
+    margin-top 2rem
+
+footer .logo-standin
+    font-size 2rem
+    margin 0
+
+    @media $min700
+        font-size 2.8rem
+
 footer .thanks
     margin-top 2rem
+
+footer .cfn-meetup-logo
+    margin 1rem auto 0
+
+    @media $min560
+        margin 1rem 0
 
 table.event-schedule
     margin 2rem auto 0
