@@ -22,11 +22,24 @@ h3
 h4
     font-size 2.1rem
 
+h5
+    font-size 1.8rem
+
+h6
+    font-size 1.4rem
+
+th, td
+    font-size 1.4rem
+
 a, p
     font-size 1.4rem
     line-height 1.4em
     margin 0
     margin-top 1.5em
+
+.container a,
+.container p
+    padding 0 1rem
 
 ul
     list-style none
@@ -36,6 +49,22 @@ ul
 header, section, footer
     padding-top 2rem
     padding-bottom 2rem
+
+header .the
+    margin-top 0
+    padding 0
+    margin 0
+    margin-top 2rem
+
+header .title
+    margin-top 0
+
+header .hours,
+header .location
+    margin-top 0.4rem
+
+
+
 
 section h3:first-child,
 section h4:first-child,
@@ -50,20 +79,40 @@ footer h4:first-child
 
 /* Objects */
 
-table.event-schedule
+footer
+    padding-bottom 1rem
+
+footer .logo
     margin-top 2rem
+
+footer .thanks
+    margin-top 2rem
+
+table.event-schedule
+    margin 2rem auto 0
     width 100%
-    max-width 20rem
+    max-width 28rem
+
+    td, th
+        font-size 1.2em
+
+        @media $min400
+            font-size 1.4em
+
 
 .button
     height 2.5em
-    padding 0 1.9em
+    padding 0 1.9em !important
     line-height 2.5em
     letter-spacing 0.1em
 
 a.register-btn
-    margin-top 2rem
+    margin-top 3rem
     font-size 1.2em
+
+ul.social-media-links
+    margin 0 auto
+    max-width 26rem
 
 ul.social-media-links li a
     text-align center
@@ -79,7 +128,17 @@ ul.sponsor-logo-links img
 
 ul.contact-links
     margin-top 2rem
-    a
+    overflow hidden
+
+    li
+        margin-top 0
+        margin-bottom 0
+
+        @media $min400
+            float left
+            width 50%
+
+    li a
         display block
         padding 0.5rem 0
         margin-top 0
@@ -94,6 +153,9 @@ ul.contact-links
 
 .large
     font-size 1.3em
+
+.small
+    font-size 0.9em
 
 .block
     display block

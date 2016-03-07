@@ -22,18 +22,20 @@ html.no-js
     header
       .container
         .u-text-center
-          h1 Nashville Day of Civic Hacking
-          h2 June 4th, 2016
-          h2 Location TBA
+          p.the THE
+          h1.title Nashville Day of Civic Hacking
+          h2.date June 4th, 2016
+          h2.hours 8AM to 8PM
+          h2.location Location TBA
 
           a.button.register-btn(href="http://nashvillecivichackday.eventbrite.com", target="_blank") Register Now
 
         p.intro.
-          Join us in June for the 4th annual National Day of Civic Hacking. Come
-          together with other coders, designers, officials, and sponsors for
-          a day long (possibly two) hackathon focusing on using Nashville’s
-          #[a(href="https://data.nashville.gov/browse") open data portal] to
-          increase Metro’s efficiency and transparency.
+          Join us in June for the 4th annual National Day of Civic Hacking in
+          Nashville. Come together with other coders, designers, officials, and
+          sponsors for a day long (possibly two) hackathon focusing on using
+          Nashville’s #[a(style="padding: 0;", href="https://data.nashville.gov/browse") open data portal] to
+          to improve the Nashville city government's ability to serve its citizens.
 
         ul.social-media-links
           li
@@ -46,9 +48,7 @@ html.no-js
       .container
         h3 Attendees
 
-        h5 Already know you're coming?
-
-        a.block.u-text-center(href="http://nashvillecivichackday.eventbrite.com", target="_blank") Register here.
+        h5 Already know you're coming? #[a(style="padding: 0; font-size: inherit;", href="http://nashvillecivichackday.eventbrite.com", target="_blank") Register on our EventBrite page.]
 
         h5 Never been to a hackathon?
 
@@ -117,20 +117,28 @@ html.no-js
 
         h5 Our Sponsors
           ul.sponsor-logo-links
-            li
-              a(href="")
-                img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
-            li
-              a(href="")
-                img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
-            li
-              a(href="")
-                img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
-            li
-              a(href="")
-                img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+            .row
+              .three.columns
+                li
+                  a(href="")
+                    img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
-        h5 Interested In Sponsors Us?
+              .three.columns
+                li
+                  a(href="")
+                    img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+
+              .three.columns
+                li
+                  a(href="")
+                    img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+
+              .three.columns
+                li
+                  a(href="")
+                    img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+
+        h5 Interested In Sponsoring Us?
 
         p.
           Sponsoring a civic hackathon is a great way to connect with grass roots
@@ -142,12 +150,29 @@ html.no-js
           that sponsorship makes that effort smoother and easier. If you or your
           company would like to chip in, send us an email. We'd love to talk about it.
 
-        a.large.block.u-text-center(href="mailto:sponsors@nashvillecivichackday.tech") Sponsor Email
+        a.large.block.u-text-center(href="mailto:sponsors@nashvillecivichackday.tech") Email us about sponsorship opportunities.
 
 
     section.past-projects
       .container
         h3 Past Projects
+        .row
+          .six.columns
+            a(href="http://inclucivics.com/", target="_blank")
+              h5 Inclucivics
+
+            p.
+              A quick blurb about inclucivics we will not speak of all Queequeg's
+              peculiarities here; how he eschewed coffee and hot rolls, and
+
+          .six.columns
+            a(href="http://www.brigadepulse.us/", target="_blank")
+              h5 Brigade Pulse
+
+            p.
+              A quick blurb about bp we will not speak of all Queequeg's
+              peculiarities here; how he eschewed coffee and hot rolls, and
+
 
     section.register-cta
       .container.u-text-center
@@ -156,25 +181,32 @@ html.no-js
 
     footer
       .container
-        h4 Contact Us
-        ul.contact-links
-          li
-            a(href="mailto:info@nashvillecivichackday.tech/") Attendees Email
+        .row
+          .six.columns
+            h4 Contact Us
+            ul.contact-links
+              li
+                a(href="mailto:info@nashvillecivichackday.tech/") Attendees Email
 
-          li
-            a(href="mailto:sponsors@nashvillecivichackday.tech/") Sponsors Email
+              li
+                a(href="mailto:sponsors@nashvillecivichackday.tech/") Sponsors Email
 
-          li
-            a(href="//twitter.com") Twitter
+              li
+                a(href="//twitter.com") Twitter
 
-          li
-            a(href="//instagram.com") Instagram
+              li
+                a(href="//instagram.com") Instagram
 
-        p.copyright &copy;
+          .six.columns
+            h5 Hey, check out our Meetup group, too!
+            a(href="http://www.meetup.com/code-for-nashville/", target="_blank")
+              img.u-img-responsive(src="/img/cfn-logo.png", alt="Code for Nashville Logo")
 
-        h4 Thank you! Let's make this awesome!
+        img.logo.u-img-responsive(src="/img/logo.svg")
 
-        img(src="/img/logo.jpg")
+        h6.thanks Thank you! Let's make this awesome!
+
+        p.copyright.small &copy; 2016 Code for Nashville, Nashville Civic Hack Day
 
     script(src='//code.jquery.com/jquery-2.2.1.min.js')
     script window.jQuery || document.write('<script src="/vendor/jquery.min.js"><\/script>')
