@@ -8,6 +8,7 @@ html.no-js(lang="en-US")
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/vendor/normalize.css')
     link(rel='stylesheet', href='/vendor/skeleton.css')
+    link(rel='stylesheet', href='/css/font-awesome.min.css')
     link(rel='stylesheet', href='/css/index.css')
     include ga.html
     //-script(src='javascripts/vendor/modernizr-2.7.1.min.js')
@@ -24,28 +25,30 @@ html.no-js(lang="en-US")
 
     header
       .container
-        .u-text-center
-          p.the THE
-          h1.title Nashville Day of Civic Hacking
-          h2.date June 4th, 2016
-          h2.hours 8AM to 8PM
-          h2.location Location TBA
+        .text-wrap
+          .u-text-center
+            p.the THE
+            h1.title Nashville Day of Civic Hacking
+            h2.date June 4th, 2016
+            h2.hours 8AM to 8PM
+            h2.location Location TBA
 
-          a.button.register-btn(href="http://nashvillecivichackday.eventbrite.com", target="_blank") Register Now
+            a.button.register-btn(href="http://nashvillecivichackday.eventbrite.com", target="_blank") Register Now
 
-        p.intro.
-          Join us in June for the 4th annual National Day of Civic Hacking in
-          Nashville. Come together with other coders, designers, officials, and
-          sponsors for a day long (possibly two) hackathon focusing on using
-          Nashville’s #[a(style="padding: 0;", href="https://data.nashville.gov/browse", target="_blank") open data portal] to
-          to improve the Nashville city government's ability to serve its citizens.
+          p.intro.
+            Join us in June for the 4th annual National Day of Civic Hacking in
+            Nashville. Come together with other coders, designers, officials, and
+            sponsors for a day long hackathon focusing on using
+            Nashville’s #[a(style="padding: 0;", href="https://data.nashville.gov/browse", target="_blank") open data portal] to
+            to improve the Nashville city government's ability to serve its citizens through greater transparency
+            and more effective feedback mechanisms.
 
         ul.social-media-links
           li
-            a(href="//twitter.com/code4nashville", target="_blank") Twitter
+            a.link-button.button.fa.fa-twitter(href="//twitter.com/code4nashville", target="_blank")  Twitter
 
           li
-            a(href="//www.instagram.com/code4nashville/", target="_blank") Instagram
+            a.link-button.button.fa.fa-instagram(href="//www.instagram.com/code4nashville/", target="_blank")  Instagram
 
     section.for-attendees
       .container
@@ -61,13 +64,17 @@ html.no-js(lang="en-US")
         h5 Never been to a hackathon?
 
         p.
-          Helpful info and links here We will not speak of all Queequeg's
-          peculiarities here; how he eschewed coffee and hot rolls, and applied
-          his undivided attention to beefsteaks, done rare.
+          Great! We'd love to have you. If you're unfamiliar with the format, a Hackathon
+          is a day long (or two), intensive learning and building session often
+          organized around a theme, like ours, transparency and feedback in government.
+
         p.
-          Enough, that when breakfast was over he withdrew like the rest into
-          the public room, lighted his tomahawk-pipe, and was sitting there
-          quietly digesting and smoking with his
+          Our hackathon is constructed with a fun, cooperative atmosphere, so if you
+          aren't an expert coder or you're just starting to learn design you'll
+          be just as welcome as a twenty year veteran of the scene.
+
+        p
+          a.alt(href="https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.f3aerpjej", target="_blank") Check out this article on Medium for an introduction to Hackathons.
 
         h5 Code of Conduct
 
@@ -77,7 +84,8 @@ html.no-js(lang="en-US")
           hesitate to contact us if you have questions, concerns, or experience
           any uncivilized behavior during the event.
 
-        a.large.block.u-text-center(href="//hackcodeofconduct.org/nashvillecivichackday", target="_blank") Read the Code of Conduct here.
+        p.u-text-center
+          a.link-button.button.large.u-text-center(href="//hackcodeofconduct.org/nashvillecivichackday", target="_blank") Read the Code #[span.display-560 of Conduct]
 
         h5 Accessibility
 
@@ -124,27 +132,29 @@ html.no-js(lang="en-US")
         h3 For Sponsors
 
         h5 Our Sponsors
-          ul.sponsor-logo-links
-            .row
-              .three.columns
-                li
-                  a(href="")
-                    img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
-              .three.columns
-                li
-                  a(href="")
-                    img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+        h6.u-text-center(style="border: 1px dashed grey; padding: 1rem;") Coming Soon!
+          //-ul.sponsor-logo-links
+            //-.row
+              //-.three.columns
+                //-li
+                  //-a(href="")
+                    //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
-              .three.columns
-                li
-                  a(href="")
-                    img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+              //-.three.columns
+                //-li
+                  //-a(href="")
+                    //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
-              .three.columns
-                li
-                  a(href="")
-                    img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+              //-.three.columns
+                //-li
+                  //-a(href="")
+                    //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+
+              //-.three.columns
+                //-li
+                  //-a(href="")
+                    //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
         h5 Interested in sponsoring us?
 
@@ -158,7 +168,8 @@ html.no-js(lang="en-US")
           that sponsorship makes that effort smoother and easier. If you or your
           company would like to chip in, send us an email. We'd love to talk about it.
 
-        a.large.block.u-text-center(href="mailto:sponsors@nashvillecivichackday.tech") Email us about sponsorship opportunities.
+        p.u-text-center
+          a.link-button.button.large.u-text-center(href="mailto:sponsors@nashvillecivichackday.tech") Get in touch #[span.display-560.hide-700, sponsors] #[span.display-700 about sponsorship]
 
 
     section.past-projects
@@ -166,20 +177,24 @@ html.no-js(lang="en-US")
         h3 Past Projects
         .row
           .six.columns
-            a(href="http://inclucivics.com/", target="_blank")
-              h5 Inclucivics
+            h5
+              a(href="http://inclucivics.com/", target="_blank") Inclucivics
 
             p.
-              A quick blurb about inclucivics we will not speak of all Queequeg's
-              peculiarities here; how he eschewed coffee and hot rolls, and
+              Inclucivics pulls data about diversity across government
+              departments from the Nashville Open Data Portal and presents
+              it to users with easy to consume graphics. Users can see general
+              information or drill down into specific departments.
 
           .six.columns
-            a(href="http://www.brigadepulse.us/", target="_blank")
-              h5 Brigade Pulse
+            h5
+              a(href="http://www.brigadepulse.us/", target="_blank") Brigade Pulse
 
             p.
-              A quick blurb about bp we will not speak of all Queequeg's
-              peculiarities here; how he eschewed coffee and hot rolls, and
+              Brigade Pulse represents an ongoing effort on behalf of Code for Nashville
+              to connect talented people with civic software projects that need help.
+              Users can browse projects that have open issues across Code for America
+              brigades all over the United States.
 
 
     section.register-cta
@@ -217,8 +232,9 @@ html.no-js(lang="en-US")
           h1.logo-standin Nashville Day of Civic Hacking
 
           p.by(style="font-size: 1rem; letter-spacing: 1px;") BY
-          a(href="//codefornashville.org", target="_blank")
-            h1.logo-standin Code for Nashville
+
+          h1.logo-standin
+            a(href="//codefornashville.org", target="_blank", style="font-size: 2rem;") Code for Nashville
 
         .u-text-center
           h6.thanks Thank you! Let's make this awesome!
