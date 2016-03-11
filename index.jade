@@ -21,6 +21,11 @@ html.no-js(lang="en-US")
         Please <a href="http://browsehappy.com/">upgrade your browser</a>
         to improve your experience.
     <![endif]-->
+    .b-happy-wrappy.u-text-center
+      p.browsehappy.
+        You are using an <strong>outdated</strong> browser.
+        Please <a class="alt" href="http://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.
 
 
     header
@@ -37,18 +42,25 @@ html.no-js(lang="en-US")
 
           p.intro.
             Join us in June for the 4th annual National Day of Civic Hacking in
-            Nashville. Come together with other coders, designers, officials, and
+            Nashville.
+
+          p.intro.display-560.
+            Come together with other coders, designers, officials, and
             sponsors for a day long hackathon focusing on using
             Nashville’s #[a(style="padding: 0;", href="https://data.nashville.gov/browse", target="_blank") open data portal] to
             to improve the Nashville city government's ability to serve its citizens through greater transparency
             and more effective feedback mechanisms.
 
-        ul.social-media-links
-          li
-            a.link-button.button.fa.fa-twitter(href="//twitter.com/code4nashville", target="_blank")  Twitter
+        .social-media-links.row
+          .six.columns
+            a.link-button.button(href="//twitter.com/code4nashville", target="_blank")
+              i.fa.fa-twitter.fa-lg
+              span Twitter
 
-          li
-            a.link-button.button.fa.fa-instagram(href="//www.instagram.com/code4nashville/", target="_blank")  Instagram
+          .six.columns
+            a.link-button.button(href="//www.instagram.com/code4nashville/", target="_blank")
+              i.fa.fa-instagram.fa-lg
+              span  Instagram
 
     section.for-attendees
       .container
