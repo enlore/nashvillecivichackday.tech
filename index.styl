@@ -56,12 +56,16 @@ ul
 /* Sections */
 
 header
-    background-image url("/img/nash_skyline.jpg")
+    background-image url("/img/skinny_nash_skyline.jpg")
     background-repeat no-repeat
     background-position center 0
     background-color $greyBlue
     color $alt-fg
     border-bottom 16px solid $red
+
+    @media $min400
+        background-position -210px 0
+        background-image url("/img/nash_skyline.jpg")
 
 header .text-wrap
     background-color $alt-bg;
