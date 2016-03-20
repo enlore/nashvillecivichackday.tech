@@ -60,9 +60,14 @@ html.no-js(lang="en-US")
               span  Instagram
 
     section.maps
-      //- AIzaSyDJcYwguFei6wtw6FPcJ_0RjTtTMbJf_Ek
-      include maps.html
+      .venue-byline()
+        h4.u-text-center Venue provided by
+        img.u-center-block.u-img-responsive(src="/img/nss-logo-horizontal.jpg", alt="The Nashville Software School")
 
+      //- AIzaSyDJcYwguFei6wtw6FPcJ_0RjTtTMbJf_Ek
+      .mapa-wrappa
+        include maps.html
+        a(href="https://maps.google.com/maps?ll=36.132796,-86.756568&z=16&t=m&hl=en-US&gl=US&mapclient=embed&q=500%20Interstate%20Blvd%20S%20Nashville%2C%20TN%2037210", target="_blank").mouse-cap-overlay
 
     section.for-attendees
       .container
@@ -148,27 +153,29 @@ html.no-js(lang="en-US")
         h5 Our Sponsors
 
         h6.u-text-center(style="border: 1px dashed grey; padding: 1rem;") Coming Soon!
-          //-ul.sponsor-logo-links
-            //-.row
-              //-.three.columns
-                //-li
-                  //-a(href="")
-                    //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
-              //-.three.columns
-                //-li
-                  //-a(href="")
-                    //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+        img.u-img-responsive(src="/img/nss-logo.jpg", alt="The Nashville Software School")
+        //-ul.sponsor-logo-links
+          //-.row
+            //-.three.columns
+              //-li
+                //-a(href="")
+                  //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
-              //-.three.columns
-                //-li
-                  //-a(href="")
-                    //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+            //-.three.columns
+              //-li
+                //-a(href="")
+                  //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
-              //-.three.columns
-                //-li
-                  //-a(href="")
-                    //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+            //-.three.columns
+              //-li
+                //-a(href="")
+                  //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
+
+            //-.three.columns
+              //-li
+                //-a(href="")
+                  //-img.u-img-responsive(src="//placehold.it/250x150&text=Logo")
 
         h5 Interested in sponsoring us?
 
