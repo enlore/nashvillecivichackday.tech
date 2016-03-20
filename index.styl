@@ -1,6 +1,9 @@
 $min400 = "(min-width: 400px)"
+$min420 = "(min-width: 420px)"
 $min560 = "(min-width: 560px)"
+$min600 = "(min-width: 600px)"
 $min700 = "(min-width: 700px)"
+$min1700 = "(min-width: 1700px)"
 
 @import "colors"
 
@@ -63,11 +66,11 @@ header
     color $alt-fg
     border-bottom 16px solid $red
 
-    @media $min400
+    @media $min420
         background-position -210px 0
         background-image url("/img/nash_skyline.jpg")
 
-    @media (min-width: 1700px)
+    @media $min1700
         background-size 100%
         background-position center 0
 
@@ -92,6 +95,26 @@ header .title
 header .hours,
 header .location
     margin-top 0.4rem
+
+section.maps
+    padding 0
+
+    .map
+        position relative
+
+    .map iframe
+        position absolute
+        top 0
+        left 0
+        width 100% !important
+        height 100% !important
+
+    .md-map, .sm-map
+        display none
+
+    .lg-map
+        height 300px
+        display block
 
 .past-projects
     a
