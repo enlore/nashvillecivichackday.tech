@@ -302,3 +302,16 @@ html.no-js(lang="en-US")
 
     script(src='//code.jquery.com/jquery-2.2.1.min.js')
     script window.jQuery || document.write('<script src="/vendor/jquery.min.js"><\/script>')
+    script.
+      $(document).ready(function () {
+        $mapLoading = $("#map-loading-gif");
+        $failedMsg = $("#map-loading-failed");
+
+        var to = setTimeout(loadingFailed, 15000);
+
+        function loadingFailed () {
+          $mapLoading.removeClass("display-block");
+          $failedMsg.addClass("display-block");
+          clearTimeout(to);
+        }
+      })
