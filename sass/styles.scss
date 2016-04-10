@@ -1,18 +1,13 @@
 @import 'normalize';
 
-// Variables
 $gutter: 20px;
-
-// Colors
 $black: #222;
 $gray: lighten($black, 10);
 $light-gray: #f6f6f6;
 $white: #fff;
 $blue: #1D89C0;
-$green: #B5F265;
+$green: #8EDF36;
 $gradient: linear-gradient(45deg, rgba(43,95,216,1) 0%, rgba(8,201,156,1) 100%);
-
-// Modular Scale
 
 h1,
 h2,
@@ -66,7 +61,7 @@ section {
             bottom: 0;
             left: 0;
             right: 0;
-            opacity: .5;
+            opacity: .3;
             z-index: 0;
         }
     }
@@ -130,7 +125,7 @@ section {
     h1 {
         margin-top: ($gutter * 3);
         span {
-            border: 5px solid $white;
+            border: 10px solid $white;
             display: inline-block;
             font-size: 1.75rem;
             font-weight: normal;
@@ -272,6 +267,7 @@ section {
 }
 .register.register {
     background: $green;
+    border-radius: 2px;
     color: $gray;
     font-size: .95rem;
     font-weight: 700;
@@ -283,6 +279,7 @@ section {
         color: $gray;
         font-size: .75rem;
         padding: ($gutter / 2.5) ($gutter / 2);
+        text-shadow: none;
     }
 }
 .ndch__contact {
@@ -321,7 +318,7 @@ section {
     margin: $gutter * 2 auto;
     max-width: 1000px;
     img {
-        max-width: 540px;
+        max-width: 554px;
         width: 100%;
     }
 }
