@@ -27,7 +27,7 @@ h6 {
 }
 
 body {
-    background: $white;
+    background: $light-gray;
     color: $black;
     font-family: 'Roboto', sans-serif;
     // padding: 0 ($gutter * 2);
@@ -41,13 +41,13 @@ b {
 section {
     background: $white;
     border-bottom: 1px solid $light-gray;
-    padding: ($gutter * 6) $gutter;
+    padding: ($gutter * 5) $gutter;
     text-align: center;
     h2 {
         // border-bottom: 10px solid $black;
         color: $black;
         display: inline-block;
-        font-size: 3rem;
+        font-size: 2.5rem;
         letter-spacing: .025em;
         margin: 0 auto ($gutter * 3);
         padding: 0 ($gutter / 2);
@@ -100,8 +100,9 @@ section {
             display: block;
         }
         th {
-            padding: $gutter ($gutter * 2);
+            padding: $gutter $gutter $gutter 0;
             font-weight: bold;
+            line-height: 1.4;
             text-align: right;
             vertical-align: top;
         }
@@ -213,6 +214,8 @@ section {
 .active.active {
     a {
         background: $white;
+        border-radius: 1px;
+        box-shadow: 0 1px 1px transparentize($black,.9);
         color: $blue;
         text-shadow: 0 0 0;
     }
@@ -227,10 +230,75 @@ section {
     text-decoration: none;
     text-transform: uppercase;
 }
+.ndch__contact {
+    ul {
+        list-style: none;
+        margin: 0 0 ($gutter * 2);
+        padding: 0;
+        li {
+            display: inline-block;
+            padding: $gutter / 2;
+        }
+    }
+}
+.map {
+    margin: 0 auto;
+    padding: 0 $gutter;
+    position: relative;
+    iframe {
+        height: 400px;
+        width: 100%;
+    }
+    .mouse-cap-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+.ndch__sponsors {
+    h3 {
+        margin-top: $gutter * 4;
+    }
+}
+.nss {
+    margin: $gutter * 2 auto;
+    max-width: 1000px;
+    img {
+
+    }
+}
 footer {
-    color: lighten($black, 50);
+    color: lighten($black, 30);
     font-size: .85rem;
     opacity: .5;
     padding: $gutter;
     text-align: center;
+}
+
+
+nav {
+    transition: all 300ms ease-in-out;    
+}
+
+.sticky.sticky {
+    background: $gradient;
+    border: 0;
+    // box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: 5;
+}
+
+/* For Old IEs */
+.no-transitions nav {
+    top: -70px;
+}
+
+.no-transitions .sticky {
+    top: 0;
 }
