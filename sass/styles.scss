@@ -27,7 +27,7 @@ h6 {
 }
 
 body {
-    background: $light-gray;
+    background: $white;
     color: $black;
     font-family: 'Roboto', sans-serif;
     // padding: 0 ($gutter * 2);
@@ -123,19 +123,20 @@ section {
     color: $white;
     display: flex;
         flex-flow: column;
-    padding: 0 0 $gutter;
+    padding: 0 $gutter $gutter;
     position: relative;
     text-align: center;
     text-shadow: 0 1px 1px transparentize($black,.9);
     h1 {
         margin-top: ($gutter * 3);
         span {
-            border: 10px solid $white;
+            border: 5px solid $white;
             display: inline-block;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
+            font-weight: normal;
             letter-spacing: .025em;
             margin: 0;
-            padding: ($gutter / 2);
+            padding: $gutter ($gutter / 2);
             text-transform: uppercase;
             width: 11em;
         }
@@ -171,14 +172,22 @@ section {
     }
     ul:nth-child(4) {
         display: flex;
+        flex-flow: column;
         width: 100%;
         max-width: 700px;
         li {
             flex: 1 0 0;
         }
         li:nth-child(2) {
-            border-left: 1px solid transparentize($white,.8);
-            border-right: 1px solid transparentize($white,.8);
+            padding: $gutter;
+        }
+        @media screen and (min-width: 400px) {
+            flex-flow: row;
+            li:nth-child(2) {
+                border-left: 1px solid transparentize($white,.8);
+                border-right: 1px solid transparentize($white,.8);
+                padding: 0 $gutter;
+            }
         }
     }
     nav {
@@ -187,12 +196,38 @@ section {
         order: -1;
         text-align: center;
         li {
-            padding: 0 ($gutter / 4);
+            padding: 0 ($gutter / 6);
+            vertical-align: middle;
+            @media screen and (min-width: 620px) {
+                &:last-of-type {
+                    display: none;
+                }
+            }
         }
         a {
             color: $white;
-            padding: ($gutter / 4) ($gutter / 2);
+            padding: ($gutter / 4) ($gutter / 4);
             text-decoration: none;
+        }
+        h3 {
+            display: none;
+        }
+        @media screen and (max-width: 620px) {
+            padding: 0;
+            ul {
+                display: none;
+            }
+            h3 {
+                display: block;
+                margin: 0 auto;
+                padding: $gutter;
+                text-align: center;
+                // max-width: 100%;
+                // width: 100%;
+                &:before {
+                    content: "Show ";
+                }
+            }
         }
     }
 }
@@ -211,6 +246,21 @@ section {
 //     clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
 // }
 
+// .ndch__schedule,
+// .ndch__faq,
+// .ndch__contact {
+//     background: $light-gray;
+//     color: $black;
+//     -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+//     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+//     h2,
+//     p,
+//     ul a,
+//     a {
+//         xcolor: $white;
+//     }
+// }
+
 .active.active {
     a {
         background: $white;
@@ -220,7 +270,7 @@ section {
         text-shadow: 0 0 0;
     }
 }
-.register {
+.register.register {
     background: $green;
     color: $gray;
     font-size: .95rem;
@@ -229,6 +279,11 @@ section {
     padding: ($gutter / 1.5) $gutter;
     text-decoration: none;
     text-transform: uppercase;
+    nav & {
+        color: $gray;
+        font-size: .75rem;
+        padding: ($gutter / 2.5) ($gutter / 2);
+    }
 }
 .ndch__contact {
     ul {
@@ -266,7 +321,8 @@ section {
     margin: $gutter * 2 auto;
     max-width: 1000px;
     img {
-
+        max-width: 540px;
+        width: 100%;
     }
 }
 footer {
@@ -283,20 +339,45 @@ nav {
 }
 
 .sticky.sticky {
-    background: $gradient;
-    border: 0;
-    // box-shadow: 0 1px 5px rgba(0,0,0,.2);
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    will-change: transform;
-    z-index: 5;
+    nav {
+        background: $gradient;
+        border: 0;
+        // box-shadow: 0 1px 5px rgba(0,0,0,.2);
+        left: 0;
+        // padding: $gutter 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        will-change: transform;
+        z-index: 10;
+        li:last-of-type {
+            display: inline-block;
+        }
+    }
+    .ndch__intro {
+        padding-top: 60px;
+    }
+}
+.show.show {
+    h3 {
+        border-bottom: 1px solid transparentize($white,.8);
+        &:before {
+            content: "Hide ";
+        }
+    }
+    ul {
+        display: block;
+    }
+    li {
+        display: inline-block;
+        padding: $gutter 0;
+        width: 48%;
+    }
 }
 
 /* For Old IEs */
 .no-transitions nav {
-    top: -70px;
+    top: -60px;
 }
 
 .no-transitions .sticky {
