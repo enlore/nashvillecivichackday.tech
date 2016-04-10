@@ -141,7 +141,8 @@
 
 
     <footer>
-        <p>&copy; 2016 Code for Nashville, Nashville Day of Civic Hacking.</p>
+        <p class="cfn"><a href="http://www.codefornashville.org/"><img src="i/cfn-logo.png" alt=""></a></p>
+        <p>&copy; 2016 <a href="http://www.codefornashville.org/">Code for Nashville</a>, Nashville Day of Civic Hacking.</p>
     </footer>
 
     <script src="j/plugins.js"></script>
@@ -153,10 +154,17 @@
             });
             smoothScroll.init({speed: 1000});
             var el = document.getElementById("navigation"),
-                nav = document.querySelector("nav");
+                nav = document.querySelector("nav"),
+                li = document.querySelectorAll("nav a"),
+                liLength = li.length;
             el.addEventListener("click", function(){
                 nav.className==="show"?nav.className="":nav.className="show";
             }, false);
+            for (var i=0;i<liLength;i++) {
+                li[i].addEventListener("click", function(){
+                    nav.className="";
+                }, false);
+            }
         }());
     </script>
 

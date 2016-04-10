@@ -56,7 +56,7 @@ section {
         &:before {
             background: $green;
             content: "";
-            height: 20px;
+            height: 15px;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -325,11 +325,17 @@ section {
 footer {
     color: lighten($black, 30);
     font-size: .85rem;
-    opacity: .5;
+    // opacity: .5;
     padding: $gutter;
     text-align: center;
 }
-
+.cfn {
+    margin-bottom: $gutter;
+    text-align: center;
+    img {
+        width: 100px;
+    }
+}
 
 nav {
     transition: all 300ms ease-in-out;    
