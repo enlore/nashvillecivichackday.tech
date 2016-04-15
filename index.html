@@ -24,6 +24,10 @@
         .ndch__intro h1 span {
             max-width: 100%;
         }
+
+        .ndch__sponsors .sponsor-logos img {
+            margin-bottom: 2rem;
+        }
     </style>
 
 </head>
@@ -56,14 +60,15 @@
 
     <section id="venue" class="ndch__venue">
         <h2><span>Venue</span></h2>
-        <p>Come join us at <a href="http://nashvillesoftwareschool.com/">Nashville Software School's</a> new location.</p>
+        <p style="text-align: center;">Come join us at <a href="http://nashvillesoftwareschool.com/">Nashville Software School's</a> new location.</p>
         <div class="nss"><img src="i/nss-logo-horizontal.jpg" alt="Nashville Software School"></div>
-        <div class="map">
+        <div class="map" style="margin-bottom: 2rem;">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.3854113819725!2d-86.7556841141891!3d36.13282805305199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88646609ff279a6f%3A0xe3c6150815a94d91!2s500+Interstate+Blvd+S%2C+Nashville%2C+TN+37210!5e0!3m2!1sen!2sus!4v1458274504515" frameborder="0" style="border:0" allowfullscreen></iframe>
             <a href="https://maps.google.com/maps?ll=36.132796,-86.756568&z=16&t=m&hl=en-US&gl=US&mapclient=embed&q=500%20Interstate%20Blvd%20S%20Nashville%2C%20TN%2037210", target="_blank" class="mouse-cap-overlay"></a>
         </div>
-    </section><!-- Venue -->
 
+        <h3 style="font-size: 1.5rem; text-align: center; letter-spacing: .025rem;">Stick around after the event for the <a href="https://www.eventbrite.com/e/nashville-day-of-civic-hacking-lot-party-hosted-by-eventbrite-tickets-24415820376" target="_blank">after party hosted by Eventbrite</a> </h3>
+    </section><!-- Venue -->
 
     <section id="schedule" class="ndch__schedule">
         <h2><span>Schedule</span></h2>
@@ -145,9 +150,25 @@
 
     <section id="sponsors" class="ndch__sponsors">
         <h2><span>Sponsors</span></h2>
-        <div class="nss">
-            <a href="http://nashvillesoftwareschool.com/"><img src="i/nss-logo-horizontal.jpg" alt="Nashville Software School"></a>
+
+        <div class="container sponsor-logos">
+            <div class="row">
+                <div class="twelve columns">
+                    <a href="http://nashvillesoftwareschool.com/"><img class="u-img-responsive u-center-block" src="i/nss-logo-horizontal.jpg" alt="Nashville Software School"></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="six columns">
+                    <img class="u-img-responsive u-center-block" src="/i/eventbrite_logo.png" />
+                </div>
+
+                <div class="six columns">
+                    <img class="u-img-responsive u-center-block" style="max-width: 200px;" src="/i/ta_logo.png" />
+                </div>
+            </div>
         </div>
+
         <h3>Interested in Sponsoring Us?</h3>
         <p>Sponsoring a civic hackathon is a great way to connect with grassroots communities of talented people and to take part in making our city a better place to live.</p>
         <p>While the hackathon is an all volunteer effort, we recognize and appreciate that sponsorship makes that effort smoother and easier. If you or your company would like to chip in, send us an email. We'd love to talk about it.</p>
