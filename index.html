@@ -25,8 +25,19 @@
             max-width: 100%;
         }
 
-        .ndch__sponsors .sponsor-logos img {
+        .ndch__sponsors .sponsor-logos .card {
+            border-top: 1px solid #e1e1e1;
+            border-bottom: 1px solid #e1e1e1;
+            min-height: 220px;
             margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .ndch__sponsors .sponsor-logos .card .card-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
         }
     </style>
 
@@ -45,7 +56,7 @@
                 <li><a data-scroll href="#faq">FAQ</a></li>
                 <li><a data-scroll href="#submissions">Submissions</a></li>
                 <li><a data-scroll href="#contact">Contact Us</a></li>
-                <li><a href="http://nashvillecivichackday.eventbrite.com" class="register">Register</a></li>
+                <li><a href="http://nashvillecivichackday.eventbrite.com" target="_blank" class="register">Register</a></li>
             </ul>
         </nav>
         <p>Come together with other <b>coders</b>, <b>designers</b>, <b>officials</b>, and <b>sponsors</b> for a day long hackathon focusing on using Nashville’s open data portal to <b>improve the Nashville city government's ability to serve its citizens</b> through greater transparency and more effective feedback mechanisms.</p>
@@ -54,13 +65,13 @@
             <li><span>Time:</span> From 8am to 8pm<br>CDT</li>
             <li><span>Location:</span> Nashville Software School<br>500 Interstate Blvd S,<br>Nashville, TN 37210</li>
         </ul>
-        <p><a href="http://nashvillecivichackday.eventbrite.com" class="register">Register</a></p>
+        <p><a href="http://nashvillecivichackday.eventbrite.com" class="register" target="_blank">Register</a></p>
     </section><!-- Intro -->
 
 
     <section id="venue" class="ndch__venue">
         <h2><span>Venue</span></h2>
-        <p style="text-align: center;">Come join us at <a href="http://nashvillesoftwareschool.com/">Nashville Software School's</a> new location.</p>
+        <p style="text-align: center;">Come join us at <a href="http://nashvillesoftwareschool.com/" target="_blank">Nashville Software School's</a> new location.</p>
         <div class="nss"><img src="i/nss-logo-horizontal.jpg" alt="Nashville Software School"></div>
         <div class="map" style="margin-bottom: 2rem;">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.3854113819725!2d-86.7556841141891!3d36.13282805305199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88646609ff279a6f%3A0xe3c6150815a94d91!2s500+Interstate+Blvd+S%2C+Nashville%2C+TN+37210!5e0!3m2!1sen!2sus!4v1458274504515" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -154,17 +165,32 @@
         <div class="container sponsor-logos">
             <div class="row">
                 <div class="twelve columns">
-                    <a href="http://nashvillesoftwareschool.com/"><img class="u-img-responsive u-center-block" src="i/nss-logo-horizontal.jpg" alt="Nashville Software School"></a>
+                    <div class="card">
+                        <div class="card-content">
+                            <a href="http://nashvillesoftwareschool.com/" target="_blank"><img class="u-img-responsive u-center-block" src="i/nss-logo-horizontal.jpg" alt="Nashville Software School"></a>
+                            <p> Hosting for the event! Wouldn't be possible with out the NSS. </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="six columns">
-                    <img class="u-img-responsive u-center-block" src="/i/eventbrite_logo.png" />
+                    <div class="card">
+                        <div class="card-content">
+                            <img class="u-img-responsive u-center-block" src="/i/eventbrite_logo.png" />
+                            <p> Big thanks for throwing the after party. Come check it out! </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="six columns">
-                    <img class="u-img-responsive u-center-block" style="max-width: 200px;" src="/i/ta_logo.png" />
+                    <div class="card">
+                        <div class="card-content">
+                            <img class="u-img-responsive u-center-block" style="max-width: 200px;" src="/i/ta_logo.png" />
+                            <p> Can't have a party with out space, and they came through. Thanks! </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,7 +198,7 @@
         <h3>Interested in Sponsoring Us?</h3>
         <p>Sponsoring a civic hackathon is a great way to connect with grassroots communities of talented people and to take part in making our city a better place to live.</p>
         <p>While the hackathon is an all volunteer effort, we recognize and appreciate that sponsorship makes that effort smoother and easier. If you or your company would like to chip in, send us an email. We'd love to talk about it.</p>
-        <p class="ndch__get-in-touch"><a href="mailto:info@nashvillecivichackday.tech">Get in touch about sponsorship</a></p>
+        <p class="ndch__get-in-touch"><a href="mailto:info@nashvillecivichackday.tech" target="_blank">Get in touch about sponsorship</a></p>
     </section><!-- Sponsors -->
 
 
@@ -184,9 +210,9 @@
         <h3>Never been to a hackathon?</h3>
         <p>Great! We'd love to have you. If you're unfamiliar with the format, a hackathon is a day long (or two), intensive learning and building session often organized around a theme, like ours, transparency and feedback in government.</p>
         <p>Our hackathon is constructed with a fun, cooperative atmosphere, so if you aren't an expert coder or you're just starting to learn design you'll be just as welcome as a twenty year veteran of the scene.</p>
-        <p><a href="https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.f3aerpjej">Check out this article on Medium</a> for an introduction to hackathons.</p>
+        <p><a href="https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.f3aerpjej" target="_blank">Check out this article on Medium</a> for an introduction to hackathons.</p>
         <h3>Code of Conduct</h3>
-        <p>We take making the Nashville Civic Hack Day a safe place for people to get together very seriously. Please <a href="http://hackcodeofconduct.org/nashvillecivichackday">read our code of conduct</a>, and don't hesitate to contact us if you have questions, concerns, or experience any uncivilized behavior during the event.</p>
+        <p>We take making the Nashville Civic Hack Day a safe place for people to get together very seriously. Please <a href="http://hackcodeofconduct.org/nashvillecivichackday" target="_blank">read our code of conduct</a>, and don't hesitate to contact us if you have questions, concerns, or experience any uncivilized behavior during the event.</p>
         <h3>Accessibility</h3>
         <p>We're ironing out the details of the venue, and as soon as we know what's up, we'll post details here.</p>
     </section><!-- FAQ -->
@@ -198,11 +224,11 @@
         <h3>Past Projects</h3>
         <div class="ndch__past-projects">
             <div>
-                <h4><a href="http://inclucivics.com/">Inclucivics</a></h4>
+                <h4><a href="http://inclucivics.com/" target="_blank">Inclucivics</a></h4>
                 <p>Inclucivics pulls data about diversity across government departments from the Nashville Open Data Portal and presents it to users with easy to consume graphics. Users can see general information or drill down into specific departments.</p>
             </div><!-- Inclucivics -->
             <div>
-                <h4><a href="http://www.brigadepulse.us/">Brigade Pulse</a></h4>
+                <h4><a href="http://www.brigadepulse.us/" target="_blank">Brigade Pulse</a></h4>
                 <p>Brigade Pulse represents an ongoing effort on behalf of Code for Nashville to connect talented people with civic software projects that need help. Users can browse projects that have open issues across Code for America brigades all over the United States.</p>
             </div><!-- Brigade Pulse -->
         </div>
@@ -213,17 +239,17 @@
         <ul>
             <li><a href="mailto:info@nashvillecivichackday.tech">Attendees Email</a></li>
             <li><a href="mailto:sponsors@nashvillecivichackday.tech">Sponsors Email</a></li>
-            <li><a href="http://twitter.com/code4nashville">Twitter</a></li>
-            <li><a href="http://www.instagram.com/code4nashville/">Instagram</a></li>
-            <li><a href="http://www.meetup.com/code-for-nashville/">Meetup</a></li>
+            <li><a href="http://twitter.com/code4nashville" target="_blank">Twitter</a></li>
+            <li><a href="http://www.instagram.com/code4nashville/" target="_blank">Instagram</a></li>
+            <li><a href="http://www.meetup.com/code-for-nashville/" target="_blank">Meetup</a></li>
         </ul>
         <p>See anything funky or bugged out with the site? Have additional questions? <a href="mailto:info@nashvillecivichackday.tech">Let us know!</a></p>
     </section><!-- Contact Us -->
 
 
     <footer>
-        <p class="cfn"><a href="http://www.codefornashville.org/"><img src="i/cfn-logo.png" alt=""></a></p>
-        <p>&copy; 2016 <a href="http://www.codefornashville.org/">Code for Nashville</a>, Nashville Day of Civic Hacking.</p>
+        <p class="cfn"><a href="http://www.codefornashville.org/" target="_blank"><img src="i/cfn-logo.png" alt=""></a></p>
+        <p>&copy; 2016 <a href="http://www.codefornashville.org/" target="_blank">Code for Nashville</a>, Nashville Day of Civic Hacking.</p>
     </footer>
 
     <script src="j/plugins.js"></script>
