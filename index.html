@@ -26,11 +26,16 @@
         }
 
         .ndch__sponsors .sponsor-logos .card {
+            /*
             border-top: 1px solid #e1e1e1;
             border-bottom: 1px solid #e1e1e1;
+            */
+            border: 1px solid #e1e1e1;
             min-height: 220px;
             margin-bottom: 2rem;
             position: relative;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
 
         .ndch__sponsors .sponsor-logos .card .card-content {
@@ -45,6 +50,32 @@
         .ndch__sponsors .sponsor-logos .card .card-content p {
             text-align: center;
             margin-top: 1rem;
+        }
+
+        .u-hide-550 {
+            display: block;
+        }
+
+        .u-display-550 {
+            display: none;
+        }
+
+        section h2 {
+            font-size: 2rem;
+        }
+
+        @media (min-width: 550px) {
+            .u-hide-550 {
+                display: none;
+            }
+
+            .u-display-550 {
+                display: block;
+            }
+
+            section h2 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 
@@ -85,7 +116,7 @@
             <a href="https://maps.google.com/maps?ll=36.132796,-86.756568&z=16&t=m&hl=en-US&gl=US&mapclient=embed&q=500%20Interstate%20Blvd%20S%20Nashville%2C%20TN%2037210", target="_blank" class="mouse-cap-overlay"></a>
         </div>
 
-        <h3 style="font-size: 1.5rem; text-align: center; letter-spacing: .025rem;">Stick around after the event for the <a href="https://www.eventbrite.com/e/nashville-day-of-civic-hacking-lot-party-hosted-by-eventbrite-tickets-24415820376" target="_blank">after party hosted by Eventbrite</a> </h3>
+        <h3 style="font-size: 1.5rem; text-align: center; letter-spacing: .025rem;">Stick around for the <a href="https://www.eventbrite.com/e/nashville-day-of-civic-hacking-lot-party-hosted-by-eventbrite-tickets-24415820376" target="_blank">after party hosted by Eventbrite</a>. </h3>
     </section><!-- Venue -->
 
     <section id="schedule" class="ndch__schedule">
@@ -172,31 +203,36 @@
         <div class="container sponsor-logos">
             <div class="row">
                 <div class="twelve columns">
-                    <div class="card">
-                        <div class="card-content">
-                            <a href="http://nashvillesoftwareschool.com/" style="width: 100%; display: block;" target="_blank">
-                                <img class="u-img-responsive u-center-block" src="i/nss-logo-horizontal.jpg" alt="Nashville Software School">
-                            </a>
+                    <a href="http://nashvillesoftwareschool.com/" style="width: 100%; display: block;" target="_blank">
+                        <div class="card">
+                            <div class="card-content">
+                                <img class="u-img-responsive u-center-block u-hide-550" style="max-height: 180px;" src="i/nss-logo-compact.png" alt="Nashville Software School">
+                                <img class="u-img-responsive u-center-block u-display-550" src="i/nss-logo-horizontal.jpg" alt="Nashville Software School">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <div class="row">
                 <div class="six columns">
-                    <div class="card">
-                        <div class="card-content">
-                            <img class="u-img-responsive u-center-block" src="/i/eventbrite_logo.png" />
+                    <a href="http://technologyadvice.com/" style="width: 100%; display: block;" target="_blank">
+                        <div class="card">
+                            <div class="card-content">
+                                <img class="u-img-responsive u-center-block" style="max-width: 200px;" src="/i/ta_logo.png" />
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="six columns">
-                    <div class="card">
-                        <div class="card-content">
-                            <img class="u-img-responsive u-center-block" style="/* max-width: 200px; */" src="/i/ta_logo.png" />
+                    <a href="https://www.eventbrite.com/" style="width: 100%; display: block;" target="_blank">
+                        <div class="card">
+                            <div class="card-content">
+                                <img class="u-img-responsive u-center-block" src="/i/eventbrite_logo.png" />
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
