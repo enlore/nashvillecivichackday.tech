@@ -1,0 +1,231 @@
+extends ./layout.jade
+block body
+  section#intro.ndch__intro
+    h1
+      span The Nashville Day of Civic Hacking
+    nav
+      h3#navigation Navigation
+      ul
+        li
+          a(data-scroll="", href="#intro") Intro
+        li
+          a(data-scroll="", href="#venue") Venue
+        li
+          a(data-scroll="", href="#schedule") Schedule
+        li
+          a(data-scroll="", href="#sponsors") Sponsors
+        li
+          a(data-scroll="", href="#faq") FAQ
+        li
+          a(data-scroll="", href="#submissions") Submissions
+        li
+          a(data-scroll="", href="#contact") Contact Us
+        li
+          a.register(href="http://nashvillecivichackday.eventbrite.com", target="_blank") Register
+    p
+      | Come together with other 
+      b coders
+      | , 
+      b designers
+      | , 
+      b officials
+      | , and 
+      b sponsors
+      |  for a day long hackathon focusing on using Nashville&rsquo;s open data portal to 
+      b improve the Nashville city government&apos;s ability to serve its citizens
+      |  through greater transparency and more effective feedback mechanisms.
+    ul
+      li
+        span Date:
+        |  Saturday,
+        br
+        | June 4th, 2016
+      li
+        span Time:
+        |  From 8am to 8pm
+        br
+        | CDT
+      li
+        span Location:
+        |  Nashville Software School
+        br
+        | 500 Interstate Blvd S,
+        br
+        | Nashville, TN 37210
+    p
+      a.register(href="http://nashvillecivichackday.eventbrite.com", target="_blank") Register
+  // Intro
+  section#venue.ndch__venue
+    h2
+      span Venue
+    p(style="text-align: center;")
+      | Come join us at 
+      a(href="http://nashvillesoftwareschool.com/", target="_blank") Nashville Software School&apos;s
+      |  new location.
+    .nss
+      img(src="i/nss-logo-horizontal.jpg", alt="Nashville Software School")
+    .map(style="margin-bottom: 2rem;")
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.3854113819725!2d-86.7556841141891!3d36.13282805305199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88646609ff279a6f%3A0xe3c6150815a94d91!2s500+Interstate+Blvd+S%2C+Nashville%2C+TN+37210!5e0!3m2!1sen!2sus!4v1458274504515", frameborder="0", style="border:0", allowfullscreen="")
+      a.mouse-cap-overlay(href="https://maps.google.com/maps?ll=36.132796,-86.756568&z=16&t=m&hl=en-US&gl=US&mapclient=embed&q=500%20Interstate%20Blvd%20S%20Nashville%2C%20TN%2037210", ,="", target="_blank")
+    h3(style="font-size: 1.3rem; text-align: center; letter-spacing: .025rem;")
+      | Stick around for the after party hosted by Eventbrite.
+      br
+      a(href="https://www.eventbrite.com/e/nashville-day-of-civic-hacking-lot-party-hosted-by-eventbrite-tickets-24415820376", target="_blank") Register here
+      | .
+  // Venue
+  section#schedule.ndch__schedule
+    h2
+      span Schedule
+    .container
+      .row
+        .six.columns
+          table(cellpadding="0", cellspacing="0", border="0")
+            thead
+              tr
+                th(style="text-align: left;", colspan="2")  Project Track 
+            tbody
+              tr
+                th
+                  span 8:00 AM
+                td Doors open
+              tr
+                th(rowspan="2")
+                  span 8:30 AM
+                td Introductions, kickoff
+              tr
+                td Code
+              tr
+                th(rowspan="2")
+                  span 10:00 AM
+                td Breakfast snacks
+              tr
+                td More Code
+              tr
+                th
+                  span 4:00 PM
+                td Dinner
+              tr
+                th
+                  span 7:30 PM
+                td Wrap up, presentations
+              tr
+                th
+                  span 8:00 PM
+                td Fond farewell
+              tr
+                th
+                  span After
+                td Party!
+        .six.columns
+          table(cellpadding="0", cellspacing="0", border="0")
+            thead
+              tr
+                th(style="text-align: left;", colspan="2")  Workshop Track 
+            tbody
+              tr
+                th
+                  span 11:00 AM
+                td Beginners Workshop - Topic TBA
+              tr
+                th
+                  span 5:00 PM
+                td Workshop - Topic TBA
+  // Schedule
+  section#sponsors.ndch__sponsors
+    h2
+      span Sponsors
+    .container.sponsor-logos
+      .row
+        .twelve.columns
+          a(href="http://nashvillesoftwareschool.com/", style="width: 100%; display: block;", target="_blank")
+            .card
+              .card-content
+                img.u-img-responsive.u-center-block.u-hide-550(style="max-height: 180px;", src="i/nss-logo-compact.png", alt="Nashville Software School")
+                img.u-img-responsive.u-center-block.u-display-550(src="i/nss-logo-horizontal.jpg", alt="Nashville Software School")
+      .row
+        .six.columns
+          a(href="http://technologyadvice.com/", style="width: 100%; display: block;", target="_blank")
+            .card
+              .card-content
+                img.u-img-responsive.u-center-block(style="max-width: 200px;", src="/i/ta_logo.png")
+        .six.columns
+          a(href="https://www.eventbrite.com/jobs", style="width: 100%; display: block;", target="_blank")
+            .card
+              .card-content
+                img.u-img-responsive.u-center-block(src="/i/eventbrite_logo.png")
+    h3 Interested in Sponsoring Us?
+    p
+      | Sponsoring a civic hackathon is a great way to connect with grassroots communities of talented people and to take part in making our city a better place to live.
+    p
+      | While the hackathon is an all volunteer effort, we recognize and appreciate that sponsorship makes that effort smoother and easier. If you or your company would like to chip in, send us an email. We&apos;d love to talk about it.
+    p.ndch__get-in-touch
+      a(href="mailto:info@nashvillecivichackday.tech", target="_blank") Get in touch about sponsorship
+  // Sponsors
+  section#faq.ndch__faq
+    h2
+      span FAQ
+    h3 Not a coder?
+    p
+      | Excellent! We want to invite people from all kinds of professions and backgrounds. Good software projects need more than coders. They need designers, content makers, domain experts, organizers and managers, testers, researchers, and more.
+    p
+      | Even if software is a totally foreign language to you, we&apos;ll do our best find a place for you and help you get involved. Come help us make good things!
+    h3 Never been to a hackathon?
+    p
+      | Great! We&apos;d love to have you. If you&apos;re unfamiliar with the format, a hackathon is a day long (or two), intensive learning and building session often organized around a theme, like ours, transparency and feedback in government.
+    p
+      | Our hackathon is constructed with a fun, cooperative atmosphere, so if you aren&apos;t an expert coder or you&apos;re just starting to learn design you&apos;ll be just as welcome as a twenty year veteran of the scene.
+    p
+      a(href="https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.f3aerpjej", target="_blank") Check out this article on Medium
+      |  for an introduction to hackathons.
+    h3 Code of Conduct
+    p
+      | We take making the Nashville Civic Hack Day a safe place for people to get together very seriously. Please 
+      a(href="http://hackcodeofconduct.org/nashvillecivichackday", target="_blank") read our code of conduct
+      | , and don&apos;t hesitate to contact us if you have questions, concerns, or experience any uncivilized behavior during the event.
+    h3 Accessibility
+    p
+      | We&apos;re ironing out the details of the venue, and as soon as we know what&apos;s up, we&apos;ll post details here.
+  // FAQ
+  section#submissions.ndch__submissions
+    h2
+      span Submissions
+    p
+      | What&apos;s a hackathon without projects? We&apos;ll be providing ideas and projects the day of, but 
+      b we&apos;d love to hear from you about your ideas
+      | , too.
+    p
+      | If you have a project that you&apos;re bringing with you, 
+      a(href="http://goo.gl/forms/KmwnLpvsYo", target="_blank") fill out our project proposal form
+      | . As we get closer to the event, we&apos;ll be publishing a list of projects with details about their needs and structure to make it easy for attendees to connect with a project to work on.
+    h3 Past Projects
+    .ndch__past-projects
+      div
+        h4
+          a(href="http://inclucivics.com/", target="_blank") Inclucivics
+        p
+          | Inclucivics pulls data about diversity across government departments from the Nashville Open Data Portal and presents it to users with easy to consume graphics. Users can see general information or drill down into specific departments.
+      // Inclucivics
+      div
+        h4
+          a(href="http://www.brigadepulse.us/", target="_blank") Brigade Pulse
+        p
+          | Brigade Pulse represents an ongoing effort on behalf of Code for Nashville to connect talented people with civic software projects that need help. Users can browse projects that have open issues across Code for America brigades all over the United States.
+      // Brigade Pulse
+  // Submissions
+  section#contact.ndch__contact
+    h2
+      span Contact Us
+    ul
+      li
+        a(href="mailto:info@nashvillecivichackday.tech") Attendees Email
+      li
+        a(href="mailto:sponsors@nashvillecivichackday.tech") Sponsors Email
+      li
+        a(href="http://twitter.com/code4nashville", target="_blank") Twitter
+      li
+        a(href="http://www.instagram.com/code4nashville/", target="_blank") Instagram
+      li
+        a(href="http://www.meetup.com/code-for-nashville/", target="_blank") Meetup
+    p
+      | See anything funky or bugged out with the site? Have additional questions? 
+      a(href="mailto:info@nashvillecivichackday.tech") Let us know!
