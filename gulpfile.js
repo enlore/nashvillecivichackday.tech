@@ -38,21 +38,28 @@ const defaultTasks = [
     //"copyCSS",
     //"compileStylus",
     //"mvJs",
+    "copyImg",
     "deps",
     "serve",
     "watchStuff"
 ];
 
 task("default", defaultTasks);
-task("build", ["compileJade", "compileStylus", "mvJs", "deps", "copyCSS"]);
+task("build", ["compileJade", "compileStylus", "mvJs", "deps", "copyCSS", "copyImg"]);
 task("ship", ["build"], shipIt);
 task("compileJade", compileJade);
 task("compileStylus", compileStylus);
+task("copyImg", copyImg);
 task("mvJs", mvJs);
 task("deps", deps);
 task("serve", serve);
 task("watchStuff", watchStuff);
 task("compileSass", compileSass);
+
+function copyImg () {
+    src("site/i/**/*", { base: "i" })
+        .pipe(dest(paths.distImg));
+}
 
 function shipIt () {
     const sync = spawn(path.join(__dirname, "sync.sh"));
@@ -104,7 +111,7 @@ function serve () {
     const serveConfig = {
         root: paths.dist,
         livereload: true,
-        port: 3000,
+        port: process.env.PORT || 3000,
         //debug: true,
     };
 
@@ -115,5 +122,5 @@ function watchStuff () {
     watch(paths.stylus, ["compileStylus"]);
     watch(paths.layout, ["compileJade"]);
     watch(paths.sass, ["compileSass"]);
-    watch("site/**/*.jade", ["compileJade"]);
+    watch("site/**/*.jade", ["compileJade", "copyImg"]);
 }
